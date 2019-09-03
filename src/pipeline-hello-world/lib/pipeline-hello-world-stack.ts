@@ -37,10 +37,18 @@ export class PipelineHelloWorldStack extends cdk.Stack {
       }
     });
 
+    // add a test that runs on an ubuntu linux
     pipeline.addTest("HelloLinux", {
       platform: delivlib.ShellPlatform.LinuxUbuntu,
       entrypoint: "test.sh",
-      scriptDirectory: testDir
+      scriptDirectory: path.join(testDir, "linux")
+    });
+
+    // add a test that runs on Windows
+    pipeline.addTest("HelloWindows", {
+      platform: delivlib.ShellPlatform.Windows,
+      entrypoint: "test.ps1",
+      scriptDirectory: path.join(testDir, "windows")
     });
   }
 }
