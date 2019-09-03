@@ -15,9 +15,8 @@ set
 # Verify that test artifacts are downloaded together with the test script
 echo "| Test artifact:"
 
-echo "| Removing cat"
-#cat ./README.md
-
+echo "| cat ./README.md"
+cat ./README.md
 
 echo "-------"
 echo "TEST PASS"
