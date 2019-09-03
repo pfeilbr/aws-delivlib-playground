@@ -14,6 +14,8 @@ learn [aws-delivlib](https://github.com/awslabs/aws-delivlib), which is a librar
 
 [`src/pipeline-hello-world`](src/pipeline-hello-world) is an example pipeline where the source is *this* github repo ([pfeilbr/aws-delivlib-playground](https://github.com/pfeilbr/aws-delivlib-playground))
 
+If any of the tests (`*.sh`) in [`src/pipeline-hello-world/tests/`](src/pipeline-hello-world/tests) change, be sure to do a `npm run build && npm run cdk deploy`.  Internally uses `assets.ZipDirectoryAsset` from `"@aws-cdk/assets"` package.
+
 ```sh
 mkdir -p src/pipeline-hello-world
 cd src/pipeline-hello-world
