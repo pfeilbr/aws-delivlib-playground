@@ -26,7 +26,7 @@ export class PipelineHelloWorldStack extends cdk.Stack {
               'echo "| Files in workdir:"',
               "find .",
               "mkdir dist",
-              "cp -r src/pipeline-hello-world/ dist/"
+              "cp -r src/pipeline-hello-world/* dist/"
             ]
           }
         },
