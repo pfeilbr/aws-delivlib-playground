@@ -26,7 +26,7 @@ export class PipelineHelloWorldStack extends cdk.Stack {
               'echo "| Files in workdir:"',
               "find .",
               "mkdir dist",
-              "cp -r src/pipeline-hello-world/* dist/"
+              "cp -r src/hello-world/* dist/"
             ]
           }
         },
@@ -44,11 +44,12 @@ export class PipelineHelloWorldStack extends cdk.Stack {
       scriptDirectory: path.join(testDir, "linux")
     });
 
+    // uncomment for windows.  commented to reduce test times
     // add a test that runs on Windows
-    pipeline.addTest("HelloWindows", {
-      platform: delivlib.ShellPlatform.Windows,
-      entrypoint: "test.ps1",
-      scriptDirectory: path.join(testDir, "windows")
-    });
+    // pipeline.addTest("HelloWindows", {
+    //   platform: delivlib.ShellPlatform.Windows,
+    //   entrypoint: "test.ps1",
+    //   scriptDirectory: path.join(testDir, "windows")
+    // });
   }
 }

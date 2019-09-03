@@ -11,7 +11,7 @@ learn [aws-delivlib](https://github.com/awslabs/aws-delivlib), which is a librar
 
 ## Running
 
-[`src/pipeline-hello-world`](src/pipeline-hello-world) is an example code pipeline where the source is *this* github repo ([pfeilbr/aws-delivlib-playground](https://github.com/pfeilbr/aws-delivlib-playground))
+[`src/pipeline-hello-world`](src/pipeline-hello-world) is an example code pipeline where the source is *this* github repo ([pfeilbr/aws-delivlib-playground](https://github.com/pfeilbr/aws-delivlib-playground)).  The source nodejs app is [`src/hello-world`](src/hello-world) with jest tests.
 
 **Code Pipeline**
 ```

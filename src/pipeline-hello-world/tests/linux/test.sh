@@ -21,5 +21,8 @@ echo "| Test artifact:"
 echo "| cat ./package.json"
 cat ./package.json
 
+npm install
+npm test
+
 echo "-------"
 echo "TEST PASS"
