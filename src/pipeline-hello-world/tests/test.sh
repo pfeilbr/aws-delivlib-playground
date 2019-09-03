@@ -18,7 +18,7 @@ set
 # Verify that test artifacts are downloaded together with the test script
 echo "| Test artifact:"
 
-echo "| cat ./README.md"
+echo "| cat ./package.json"
 cat ./package.json
 
 echo "-------"
