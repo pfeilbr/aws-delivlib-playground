@@ -22,11 +22,11 @@ export class PipelineHelloWorldStack extends cdk.Stack {
         phases: {
           build: {
             commands: [
+              'echo "Hello, world! from BUILDSPEC"',
               'echo "| Files in workdir:"',
               "find .",
-              'echo "Hello, world!"',
               "mkdir dist",
-              "cp README.md dist"
+              "cp -r src/pipeline-hello-world/ dist/"
             ]
           }
         },
