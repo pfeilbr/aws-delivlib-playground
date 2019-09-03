@@ -16,5 +16,6 @@ set
 echo "| Test artifact:"
 cat ./README.md
 
+
 echo "-------"
 echo "TEST PASS"
