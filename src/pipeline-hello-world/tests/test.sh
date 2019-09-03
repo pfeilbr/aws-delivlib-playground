@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# aws-delivlib-playground
+
 set -e
 scriptdir=$(cd $(dirname $0) && pwd)
 

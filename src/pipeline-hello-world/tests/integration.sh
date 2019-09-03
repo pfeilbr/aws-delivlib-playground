@@ -3,4 +3,4 @@
 # aws-delivlib-playground
 
 set -e
-echo ALL GOOD
+echo Integration Tests ALL GOOD
