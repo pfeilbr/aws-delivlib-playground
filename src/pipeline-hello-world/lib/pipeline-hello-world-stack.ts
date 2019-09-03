@@ -22,6 +22,8 @@ export class PipelineHelloWorldStack extends cdk.Stack {
         phases: {
           build: {
             commands: [
+              'echo "| Files in workdir:"',
+              "find .",
               'echo "Hello, world!"',
               "mkdir dist",
               "cp README.md dist"
