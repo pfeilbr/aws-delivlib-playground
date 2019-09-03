@@ -1,6 +1,6 @@
 # aws-delivlib-playground
 
-learn [aws-delivlib](https://github.com/awslabs/aws-delivlib), which is a library for defining continuous pipelines for building, testing and publishing code libraries through AWS CodeBuild and AWS CodePipeline
+learn [aws-delivlib](https://github.com/awslabs/aws-delivlib), which is a library that leverages [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/) for defining continuous pipelines for building, testing and publishing code libraries through AWS CodeBuild and AWS CodePipeline.  
 
 ## Prerequisites
 
@@ -9,12 +9,13 @@ learn [aws-delivlib](https://github.com/awslabs/aws-delivlib), which is a librar
     ![](https://www.evernote.com/l/AAF_-QmIfApO6L_mprwOy_t1KOBcrEHejtwB/image.png)
 
 
-
 ## Running
 
-[`src/pipeline-hello-world`](src/pipeline-hello-world) is an example pipeline where the source is *this* github repo ([pfeilbr/aws-delivlib-playground](https://github.com/pfeilbr/aws-delivlib-playground))
+[`src/pipeline-hello-world`](src/pipeline-hello-world) is an example code pipeline where the source is *this* github repo ([pfeilbr/aws-delivlib-playground](https://github.com/pfeilbr/aws-delivlib-playground))
 
-If any of the tests (`*.sh`) in [`src/pipeline-hello-world/tests/`](src/pipeline-hello-world/tests) change, be sure to do a `npm run build && npm run cdk deploy`.  Internally uses `assets.ZipDirectoryAsset` from `"@aws-cdk/assets"` package.
+**Code Pipeline**: `source -> build -> test`
+
+> If any of the tests (`*.sh`) in [`src/pipeline-hello-world/tests/`](src/pipeline-hello-world/tests) change, be sure to do a `npm run build && npm run cdk deploy`.  Internally uses `assets.ZipDirectoryAsset` from `"@aws-cdk/assets"` package.
 
 ```sh
 mkdir -p src/pipeline-hello-world
@@ -52,3 +53,12 @@ npm run cdk diff
 # delete stack
 npm run cdk destroy
 ```
+
+---
+
+**AWS Console | CodePipeline**
+
+![](https://www.evernote.com/l/AAEVgM6a2MdEw6rmWfVOIOc4GSg--d7mrX0B/image.png)
+
+**AWS Console | CloudFormation Stack**
+![](https://www.evernote.com/l/AAHMGAlD7OdL95oRQkmg5bb8dCffOzOMmcMB/image.png)
