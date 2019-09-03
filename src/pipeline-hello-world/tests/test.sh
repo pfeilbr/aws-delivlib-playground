@@ -19,7 +19,7 @@ set
 echo "| Test artifact:"
 
 echo "| cat ./README.md"
-cat ./README.md
+cat ./package.json
 
 echo "-------"
 echo "TEST PASS"
