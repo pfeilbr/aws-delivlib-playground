@@ -25,6 +25,10 @@ export class PipelineHelloWorldStack extends cdk.Stack {
               'echo "Hello, world! from BUILDSPEC"',
               'echo "| Files in workdir:"',
               "find .",
+              "pushd src/hello-world",
+              "npm install",
+              "npm test",
+              "popd",
               "mkdir dist",
               "cp -r src/hello-world/* dist/"
             ]
