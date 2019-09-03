@@ -21,7 +21,11 @@ export class PipelineHelloWorldStack extends cdk.Stack {
         version: "0.2",
         phases: {
           build: {
-            commands: ['echo "Hello, world!"']
+            commands: [
+              'echo "Hello, world!"',
+              "mkdir dist",
+              "cp README.md dist"
+            ]
           }
         },
         artifacts: {

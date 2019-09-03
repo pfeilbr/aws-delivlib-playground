@@ -4,11 +4,15 @@ learn [aws-delivlib](https://github.com/awslabs/aws-delivlib), which is a librar
 
 ## Prerequisites
 
+* pipeline source github repo must exist. (e.g. [pfeilbr/aws-delivlib-playground](https://github.com/pfeilbr/aws-delivlib-playground))
 * github personal access token must be stored in SSM Parameter named `/com/brianpfeil/aws-delivlib-playground/github-personal-access-token`
     ![](https://www.evernote.com/l/AAF_-QmIfApO6L_mprwOy_t1KOBcrEHejtwB/image.png)
 
 
+
 ## Running
+
+[`src/pipeline-hello-world`](src/pipeline-hello-world) is an example pipeline where the source is *this* github repo ([pfeilbr/aws-delivlib-playground](https://github.com/pfeilbr/aws-delivlib-playground))
 
 ```sh
 mkdir -p src/pipeline-hello-world
@@ -31,4 +35,18 @@ npm run build
 
 # generate cfn to stdout
 npm run cdk synth
+
+# deploy stack
+npm run cdk deploy
+
+# make changes
+
+# build
+npm run build
+
+# diff
+npm run cdk diff
+
+# delete stack
+npm run cdk destroy
 ```

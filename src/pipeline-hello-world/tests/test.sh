@@ -14,7 +14,7 @@ set
 
 # Verify that test artifacts are downloaded together with the test script
 echo "| Test artifact:"
-cat ${scriptdir}/README
+cat ./README.md
 
 echo "-------"
 echo "TEST PASS"
